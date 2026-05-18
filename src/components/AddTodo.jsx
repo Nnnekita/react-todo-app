@@ -14,12 +14,12 @@ export default function AddTodo({ onAdd }) {
       <input
         type="text"
         className="add-input"
-        placeholder="What needs to be done?"
+        placeholder="Что нужно сделать?"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
       <button type="submit" className="add-btn">
-        Add
+        Добавить
       </button>
     </form>
   )

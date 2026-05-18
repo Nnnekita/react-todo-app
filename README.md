@@ -1,81 +1,81 @@
-# React Todo App
+# React — Список задач
 
-A clean and responsive task management application built with React and Vite. Features local storage persistence, filtering, and a modern UI.
+Простое и удобное приложение для управления задачами, созданное на React и Vite. Данные сохраняются в localStorage, есть фильтрация и современный адаптивный интерфейс.
 
-## 📸 Screenshots
+## 📸 Скриншоты
 
-![Todo App Screenshot](./screenshots/screenshot.png)
+![Скриншот приложения](./screenshots/screenshot.png)
 
-*Clean interface with task filtering and completion tracking*
+*Чистый интерфейс с фильтрацией и отслеживанием выполнения задач*
 
-## ✨ Features
+## ✨ Возможности
 
-- ✅ Add, complete, and delete tasks
-- 🔄 Filter tasks: All, Active, Completed
-- 💾 LocalStorage persistence (tasks survive page refresh)
-- 📱 Fully responsive design
-- 🎨 Modern, minimal UI with smooth transitions
-- ⚡ Built with Vite for fast development
+- ✅ Добавление, выполнение и удаление задач
+- 🔄 Фильтрация: Все, Активные, Выполненные
+- 💾 Сохранение в localStorage (задачи не пропадут при обновлении)
+- 📱 Полностью адаптивный дизайн
+- 🎨 Минималистичный UI с плавными анимациями
+- ⚡ Быстрая разработка на Vite
 
-## 🛠 Tech Stack
+## 🛠 Стек
 
-- **React 19** - UI library
-- **Vite** - Build tool
-- **CSS3** - Styling with CSS variables
-- **LocalStorage** - Data persistence
+- **React 19** — библиотека интерфейса
+- **Vite** — сборщик
+- **CSS3** — стили с CSS-переменными
+- **LocalStorage** — хранение данных
 
-## 🚀 Quick Start
+## 🚀 Быстрый старт
 
-### Prerequisites
+### Требования
 - Node.js 18+
-- npm or yarn
+- npm или yarn
 
-### Installation
+### Установка
 
 ```bash
-# Clone the repository
+# Клонирование репозитория
 git clone https://github.com/Nnnekita/react-todo-app.git
 cd react-todo-app
 
-# Install dependencies
+# Установка зависимостей
 npm install
 
-# Start development server
+# Запуск dev-сервера
 npm run dev
 
-# Build for production
+# Сборка для продакшена
 npm run build
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Откройте [http://localhost:5173](http://localhost:5173) в браузере.
 
-## 📁 Project Structure
+## 📁 Структура проекта
 
 ```
 src/
 ├── components/
-│   ├── AddTodo.jsx      # Input form
-│   ├── TodoItem.jsx     # Single task
-│   ├── TodoList.jsx     # Task list
-│   └── Filter.jsx       # Filter buttons
-├── App.jsx              # Main component
-├── App.css              # Styles
-└── main.jsx             # Entry point
+│   ├── AddTodo.jsx      # Форма добавления
+│   ├── TodoItem.jsx     # Одна задача
+│   ├── TodoList.jsx     # Список задач
+│   └── Filter.jsx       # Кнопки фильтрации
+├── App.jsx              # Главный компонент
+├── App.css              # Стили
+└── main.jsx             # Точка входа
 ```
 
-## 🌐 Demo
+## 🌐 Демо
 
-[Live Demo](https://nnnekita.github.io/react-todo-app/) *(after deployment)*
+[Живая демонстрация](https://nnnekita.github.io/react-todo-app/) *(после деплоя)*
 
-## 📝 License
+## 📝 Лицензия
 
 MIT
 
-## 👤 Author
+## 👤 Автор
 
 **Nnnekita**
 - GitHub: [@Nnnekita](https://github.com/Nnnekita)
 
 ---
 
-© 2026 Nnnekita. Built with React & Vite.
+© 2026 Nnnekita. Создано на React и Vite.

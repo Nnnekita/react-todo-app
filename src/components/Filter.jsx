@@ -1,8 +1,8 @@
 export default function Filter({ filter, onFilter }) {
   const filters = [
-    { value: 'all', label: 'All' },
-    { value: 'active', label: 'Active' },
-    { value: 'completed', label: 'Completed' },
+    { value: 'all', label: 'Все' },
+    { value: 'active', label: 'Активные' },
+    { value: 'completed', label: 'Выполненные' },
   ]
 
   return (

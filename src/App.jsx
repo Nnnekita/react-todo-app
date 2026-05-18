@@ -48,8 +48,8 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>Todo App</h1>
-        <p className="subtitle">Organize your tasks efficiently</p>
+        <h1>Список задач</h1>
+        <p className="subtitle">Организуй свои дела эффективно</p>
       </header>
 
       <main className="container">
@@ -62,7 +62,7 @@ function App() {
         />
         {todos.some(t => t.completed) && (
           <button className="clear-btn" onClick={clearCompleted}>
-            Clear completed
+            Очистить выполненные
           </button>
         )}
       </main>
