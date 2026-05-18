@@ -1,14 +1,16 @@
 :root {
-  --bg-color: #f5f7fa;
-  --card-bg: #ffffff;
-  --primary: #4f46e5;
-  --primary-hover: #4338ca;
-  --text: #1f2937;
-  --text-light: #6b7280;
-  --border: #e5e7eb;
-  --danger: #ef4444;
-  --success: #10b981;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --bg-color: #0d0d1a;
+  --card-bg: #1a1a2e;
+  --primary: #ff007f;
+  --primary-hover: #e6006f;
+  --secondary: #00ffff;
+  --text: #e0e0ff;
+  --text-light: #8888aa;
+  --border: #2a2a4a;
+  --danger: #ff4466;
+  --success: #00ff88;
+  --shadow: 0 4px 15px rgba(255, 0, 127, 0.15);
+  --glow: 0 0 10px rgba(255, 0, 127, 0.5);
 }
 
 * {
@@ -19,7 +21,7 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: var(--bg-color);
+  background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 50%, #0d0d1a 100%);
   color: var(--text);
   line-height: 1.5;
   min-height: 100vh;
@@ -42,8 +44,18 @@ body {
 .header h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--primary);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
   margin-bottom: 0.5rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 5px rgba(255, 0, 127, 0.3)); }
+  to { filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.3)); }
 }
 
 .subtitle {
@@ -67,27 +79,31 @@ body {
   border: 2px solid var(--border);
   border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.2s;
+  background: var(--card-bg);
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .add-input:focus {
   outline: none;
   border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
 }
 
 .add-btn {
   padding: 0.75rem 1.5rem;
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), #ff4488);
   color: white;
   border: none;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .add-btn:hover {
-  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--glow);
 }
 
 .filter-bar {
@@ -104,12 +120,19 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s;
+  color: var(--text);
+}
+
+.filter-btn:hover {
+  border-color: var(--secondary);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
 }
 
 .filter-btn.active {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--glow);
 }
 
 .todo-list {
@@ -117,6 +140,7 @@ body {
   border-radius: 12px;
   box-shadow: var(--shadow);
   overflow: hidden;
+  border: 1px solid var(--border);
 }
 
 .todo-item {
@@ -125,6 +149,11 @@ body {
   padding: 1rem;
   border-bottom: 1px solid var(--border);
   gap: 0.75rem;
+  transition: background 0.2s;
+}
+
+.todo-item:hover {
+  background: rgba(255, 0, 127, 0.05);
 }
 
 .todo-item:last-child {
@@ -159,7 +188,7 @@ body {
 }
 
 .delete-btn:hover {
-  background: #fee2e2;
+  background: rgba(255, 68, 102, 0.2);
   color: var(--danger);
 }
 
@@ -176,9 +205,10 @@ body {
 }
 
 .clear-btn:hover {
-  background: #fee2e2;
+  background: rgba(255, 68, 102, 0.1);
   color: var(--danger);
   border-color: var(--danger);
+  box-shadow: 0 0 8px rgba(255, 68, 102, 0.3);
 }
 
 .empty-state {
@@ -195,13 +225,14 @@ body {
 }
 
 .footer a {
-  color: var(--primary);
+  color: var(--secondary);
   text-decoration: none;
   font-weight: 500;
 }
 
 .footer a:hover {
   text-decoration: underline;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
 }
 
 @media (max-width: 480px) {
